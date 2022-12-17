@@ -1,0 +1,107 @@
+.loginContainer {
+    height: 100vh;
+    position: relative;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.loginOutline {
+    background-color: rgba(0, 0, 0, 0.734);
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 30rem;
+    width: 25rem;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.loginTitle {
+    padding-top: 3rem;
+    padding-bottom: 3.5rem;
+    font-size: 30px;
+}
+
+.loginLI {
+    margin-bottom: 1.5rem;
+}
+
+.loginLI > input {
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #333333;
+    height: 2.5rem;
+    width: 16rem;
+    border-radius: 4px;
+    border: none;
+    outline-width: none;
+    outline: none;
+    color: white;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active {
+    background-color: #333333;
+    border: none;
+    outline-width: none;
+    outline: none;
+}
+
+input:-webkit-autofill {
+    background-color: transparent;
+    -webkit-box-shadow: 0 0 0 50px #333333 inset;
+}
+
+.loginContinueButton {
+    margin-bottom: 4.5rem;
+    padding: 0.2rem 1rem;
+}
+
+
+.loginLoginButton {
+    margin-top: 0.4rem;
+
+    padding: 0.2rem 0.8rem;
+
+}
+
+.loginLoginButton, .loginContinueButton {
+    border-radius: 10px;
+    border: none;
+}
+
+label > select {
+    border-radius: 5px
+}
+
+select > option {
+    text-align: center;
+}
+
+.loginMember {
+    color: red;
+    font-weight: 600;
+}
+
+.loginLoginButton:hover, .loginContinueButton:hover {
+    transform: scale(1.08);
+
+}
+
+.loginBack {
+    display: flex;
+    align-items: center;
+    margin-top: 4rem;
+    margin-left: 0.5rem;
+}
+
+
+@media screen and (max-width: 388px) {
+    .loginBack {
+        margin-left: 4.7rem;
+    }
+}

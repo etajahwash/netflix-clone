@@ -1,0 +1,163 @@
+.rowSection  {
+    margin-left: 1.5rem;
+}
+
+.cardImg {
+    width: 13rem;
+    margin: 2.5rem 0.1rem;
+    height: 8rem;
+    overflow-y: hidden;
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+    /* padding-bottom: 3rem; */
+}
+
+.bigCardImg {
+    width: 13rem;
+    height: 20rem;
+    overflow-y: hidden;
+    margin: 2.5rem 0.1rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+}
+
+.cardImg:hover {
+    transform: scale(1.08);
+    transition: all 0.5s;
+    overflow-y: visible;
+}
+
+.bigCardImg:hover {
+    overflow-y: visible;
+    transform: scale(1.058);
+    transition: all 1.2s;
+    opacity: 1;
+}
+
+.bottomText {
+    padding-top: 20rem;
+    color: white;
+    text-align: center;
+    padding-bottom: 1.5rem;
+}
+
+.bottomTextSmall {
+    padding-top: 8rem;
+    color: white;
+    text-align: center;
+    padding-bottom: 1.5rem;
+    font-size: 15px;
+}
+
+.rowTitle {
+    color: white;
+    margin-bottom: -2rem;
+}
+
+.bigRowTitle {
+    color: white;
+    /* margin-bottom: -2rem; */
+}
+
+.row {
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    transform: translateX(0px);
+    transition: all 1s ease;
+    width: max-content;
+}
+/* 
+.imgSection {
+    margin-bottom: 5rem;
+} */
+
+.imgSectionLarge {
+    overflow: hidden;
+    padding-bottom: 2rem;
+}
+
+.imgSectionSmall {
+    overflow: hidden;
+}
+
+.row::-webkit-scrollbar {
+    display: none;
+}
+
+.rowHover {
+    text-align: center;
+}
+
+.wrapper {
+    position: relative;
+    overflow-x: hidden;
+}
+
+.visible {
+    color: red;
+    background-color: plum;
+}
+
+.sliderArrow {
+    width: 50px;
+    color: white;
+    background-color: rgba(17, 17, 17, 0.522);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    cursor: pointer;
+    z-index: 98;
+}
+
+.left {
+    left: 0;
+}
+
+.right {
+    right: 0;
+}
+
+.itemSection {
+    background-color: blueviolet;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    /* height: 500px; */
+    display: none;
+}
+
+.icons {
+    margin-top: -2.6rem;
+    /* padding-left: 2rem; */
+    /* height: 500px; */
+}
+
+
+.addButton {
+    padding: 0rem 1rem;
+}
+
+.textWrap {
+    width: 218px;
+    word-wrap: break-word;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    /* height: 500px; */
+}
+
+.smallRowText {
+    word-wrap: break-word;
+    text-align: center;
+    margin-left: 1.2rem;
+}
+
+.increase {
+    height: 150px;
+    width: 250px;
+    opacity: 1;
+    /* padding-bottom: 1rem; */
+}

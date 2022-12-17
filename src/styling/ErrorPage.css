@@ -1,0 +1,38 @@
+/* body {
+
+} */
+
+.errorSection {
+    margin-top: 3rem;
+    text-align: center;
+    box-sizing: border-box;
+    height: 100vh;
+}
+
+.errorContents {
+    padding: 1rem 0px;
+    padding-top: 15rem;
+}
+
+.oops {
+    font-size: 50px;
+    padding-bottom: 1rem;
+    color: white;
+}
+
+.errorText {
+    color: white;
+    font-size: 25px;
+}
+
+.errorButton {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 0.3rem 2rem;
+    border-radius: 5px;
+}
+
+.errorButton:hover {
+    transform: scale(1.08);
+}

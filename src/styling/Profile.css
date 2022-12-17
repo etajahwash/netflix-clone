@@ -1,0 +1,283 @@
+.profileSection {
+    margin-top: 5rem;
+    color: white;
+}
+
+body {
+    background-color: #111;  
+}
+
+.upper {
+    display: flex;
+    margin-left: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    align-items: center;
+}
+
+.upper > h1 {
+    padding-right: 2rem;
+}
+
+.miniLogo {
+    width: 1rem;
+    height: 1rem;
+    padding-right: 0.5rem;
+}
+
+hr {
+    margin: 0px 2rem;
+    border-style: solid;
+    border-top: 0px;
+}
+
+.mid {
+    display: flex;
+    justify-content: space-between;
+    margin: 0rem 2rem;
+    padding: 1rem 0rem;
+}
+
+.midOne > h2 {
+    padding-bottom: 1rem;
+    font-size: 22px;
+}
+
+.midOne > button {
+    padding: 0.8rem 2rem;
+    border-radius: 3px;
+    background-color: rgb(202, 197, 197);
+    border: none;
+    cursor: pointer;
+}
+
+.midOne > button:hover {
+    background-color: white;
+}
+
+.midTwo {
+    line-height: 2rem;
+}
+
+.profileEmail {
+    margin-top: 0.5rem;
+}
+
+.billing {
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.lower{
+    margin: 0rem 2rem;
+}
+
+.lowerOne {
+    display: flex;
+    align-items: center;
+}
+
+.lowerOne > h3 {
+    padding-right: 1rem;
+}
+
+.underPlans {
+    margin: 0px;
+    width: 13.5rem;
+}
+
+.planType {
+    color: red;
+}
+
+.plansSection {
+    padding-top: 2rem;
+    margin: 0rem 0.5rem;
+}
+
+.plansSection > a {
+    color: rgb(87, 84, 84);
+}
+
+.basic {
+    border: solid 3px gray;
+    background-color: white;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.basic:hover {
+    border-color: blue;
+}
+
+.basic > hr {
+    margin: 0rem 1.5rem;
+}
+
+.basic > h4 {
+    text-align: center;
+    padding: 1rem 0rem;
+}
+
+.basic > p {
+    text-align: center;
+    padding: 1rem 0rem;
+}
+
+.standard {
+    border: solid 3px gray;
+    background-color: white;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.standard:hover {
+    border-color: blue;
+}
+
+.standard > hr {
+    margin: 0rem 1.5rem;
+}
+
+.standard > h4 {
+    text-align: center;
+    padding: 1rem 0rem;
+}
+
+.standard > p {
+    text-align: left;
+    padding: 1rem 0rem;
+    padding-left: 1rem;
+}
+
+.premium {
+    border: solid 3px gray;
+    background-color: white;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.premium:hover {
+    border-color: blue;
+}
+
+.premium > hr {
+    margin: 0rem 1.5rem;
+}
+
+.premium > h4 {
+    text-align: center;
+    padding: 1rem 0rem;
+}
+
+.premium > p {
+    text-align: left;
+    padding: 1rem 0rem;
+    padding-left: 1rem;
+}
+
+.plansSection > p {
+    font-size: 13px;
+    margin-bottom: 0.8rem;
+
+}
+
+.tou {
+    color: rgb(84, 185, 252);
+}
+
+.profileSB {
+    display: flex;
+    justify-content: space-between;
+}
+
+.profileLogout {
+    margin-right: 3rem;
+    text-align: center;
+    margin-top: 0.4rem;
+}
+
+.profileLogoutButton {
+    background-color: red;
+    border-radius: 10px;
+    border: none;
+    padding: 0.3rem 1rem;
+    cursor: pointer;
+}
+
+.basic {
+    padding-bottom: 3rem;
+    z-index: 99;
+}
+
+.basicText {
+    text-align: center;
+    margin-top: -3rem;
+    margin-bottom: 2rem;
+    z-index: 1;
+}
+
+.memberSinceSection {
+    display: flex;
+
+}
+
+
+
+
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 809px) {
+    .basicText {
+        margin-top: -7.5rem;
+        margin-bottom: 4rem;
+    }
+
+    .basic {
+        padding-bottom: 4rem;
+        margin-bottom: 4rem;
+    }
+
+}
+
+@media screen and (max-width: 495px) {
+
+    .memberSinceSection {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 392px) {
+
+    .midTwo {
+        display: none;
+    }
+
+    .midOne {
+        text-align: center;
+        margin-left: 1.2rem;
+    }
+
+    /* .lowerOne {
+        text-align: center;
+        margin-left: 5.5rem;
+    }
+
+    .underPlans {
+        width: 20.2rem;
+    } */
+}
+
+@media screen and (max-width: 339px) {
+    .basicText {
+        margin-top: -9.5rem;
+        margin-bottom: 4rem;
+    }
+
+    .basic {
+        padding-bottom: 6rem;
+        margin-bottom: 4rem;
+    }
+}
