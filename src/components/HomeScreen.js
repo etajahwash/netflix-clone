@@ -4,13 +4,16 @@ import Banner from './Banner'
 import Row from './Row'
 import requests from '../Request'
 import { Navigate } from 'react-router-dom'
-import { useState } from 'react'
+import { Helmet } from 'react-helmet'
 
 
 export default function HomeScreen({isSignedIn}) {
 
     return (
         <div className="homeScreen">
+            <Helmet>
+                <title>Home - Netflix</title>
+            </Helmet>
             {isSignedIn === true ? (
             <div key={100}>
             <Navbar />

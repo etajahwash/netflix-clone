@@ -121,6 +121,18 @@
     right: 0;
 }
 
+.largeIcon {
+    width: "30px";
+    height: "123px";
+    padding: 3rem 0rem;
+  }
+
+.smallIcon {
+    width: "30px";
+    height: "fit-content";
+    margin-top: '5rem';
+  }
+
 .itemSection {
     background-color: blueviolet;
     border-bottom-left-radius: 5px;

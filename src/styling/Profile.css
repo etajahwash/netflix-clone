@@ -229,6 +229,12 @@ hr {
 
 /* MEDIA QUERIES */
 
+@media screen and (min-width: 890px) {
+    .basic {
+        margin: 0rem 3.5rem;
+    }
+}
+
 @media screen and (max-width: 809px) {
     .basicText {
         margin-top: -7.5rem;
@@ -259,15 +265,6 @@ hr {
         text-align: center;
         margin-left: 1.2rem;
     }
-
-    /* .lowerOne {
-        text-align: center;
-        margin-left: 5.5rem;
-    }
-
-    .underPlans {
-        width: 20.2rem;
-    } */
 }
 
 @media screen and (max-width: 339px) {

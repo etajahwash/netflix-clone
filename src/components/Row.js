@@ -46,18 +46,6 @@ export default function Row(props) {
     }
   };
 
-  const styles = {
-    largeIcon: {
-      width: "30px",
-      height: "123px",
-    },
-    smallIcon: {
-      width: "30px",
-      height: "fit-content",
-      marginTop: '5rem'
-    },
-  };
-
   const listRef = useRef();
 
   const sliderClick = (direction) => {
@@ -72,7 +60,6 @@ export default function Row(props) {
     }
   };
 
-//   console.log(movieRow[0])
   return (
     <div className="rowSection">
       <h5 className={props.isLargeRow ? "bigRowTitle" : "rowTitle"}>
@@ -80,8 +67,7 @@ export default function Row(props) {
       </h5>
       <div className="wrapper">
         <ArrowBackIosOutlined
-          className="sliderArrow left"
-          style={props.isLargeRow ? styles.largeIcon : styles.smallIcon}
+          className={props.isLargeRow ? "sliderArrow left largeIcon" : "sliderArrow left smallIcon"}
           onClick={() => sliderClick("left")}
         />
         <div className="row" ref={listRef}>
@@ -112,8 +98,7 @@ export default function Row(props) {
           )}
         </div>
         <ArrowForwardIosOutlined
-          className="sliderArrow right"
-          style={props.isLargeRow ? styles.largeIcon : styles.smallIcon}
+          className={props.isLargeRow ? "sliderArrow right largeIcon" : "sliderArrow right smallIcon"}
           onClick={() => sliderClick("right")}
         />
       </div>

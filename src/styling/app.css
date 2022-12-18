@@ -2,3 +2,20 @@
     background-color: #111;
 }
 
+
+
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 500px) {
+    .app::-webkit-scrollbar {
+        display: none;
+      }
+      
+      /* Hide scrollbar for IE, Edge and Firefox */
+      .app {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+      }
+     
+}

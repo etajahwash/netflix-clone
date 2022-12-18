@@ -1,12 +1,13 @@
-import "../styling/checkoutSuccess.css";
+import "../styling/LoginRedirect.css";
 import { useNavigate } from "react-router-dom";
 import scobg from "../img/netflixbg2.jpg";
 import { useEffect } from "react";
 
-export default function CheckoutSuccess() {
+export default function LoginRedirect({setIsSignedIn}) {
   const navigate = useNavigate();
 
   useEffect(() => {
+    setIsSignedIn(prev => prev = true) 
     setTimeout(() => {
     navigate('/home')
   }, "3000");

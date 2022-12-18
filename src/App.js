@@ -8,7 +8,7 @@ import Movies from "./routes/Movies/Movies";
 import NewPopular from "./routes/NewPopular/NewPopular";
 import LandingPage from "./components/LandingPage";
 import Login from "./components/Login";
-import CheckoutSuccess from "./components/CheckoutSuccess";
+import LoginRedirect from "./components/LoginRedirect";
 import { AuthContextProvider } from "./context/AuthContext";
 import { useState } from "react";
 import "./styling/app.css";
@@ -42,7 +42,7 @@ function App() {
               <Route key={1010} path='/new-&-popular' element={<><Navbar /> <NewPopular isSignedIn={isSignedIn} setIsSignedIn={setIsSignedIn} /></>} />
               <Route key={1011} path='/profile' element={<><Navbar /> <Profile isSignedIn={isSignedIn} setIsSignedIn={setIsSignedIn} plan={plan} setPlan={setPlan} /></>} />
               <Route key={1012} path='/home' element={<><Navbar /> <HomeScreen isSignedIn={isSignedIn} setIsSignedIn={setIsSignedIn} /></>} />
-              <Route key={1014} path='/login-redirect' element={<CheckoutSuccess />} />
+              <Route key={1014} path='/login-redirect' element={<LoginRedirect isSignedIn={isSignedIn} setIsSignedIn={setIsSignedIn} />} />
             </Routes>
           </Router>
         </div>

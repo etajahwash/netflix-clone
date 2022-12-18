@@ -9,6 +9,8 @@ export default function MoviesBanner() {
 
 const [movie, setMovie] = useState([]);
 const [show, setShow] = useState(false);
+const [moreInfo, setMoreInfo] = useState(false)
+
 
     useEffect(() => {
         function fetchData() {
@@ -24,7 +26,7 @@ const [show, setShow] = useState(false);
         fetchData()
     }, []);
 
-    console.log(movie)
+    // console.log(movie)
 
     function truncate(string, n) {
         return string?.length > n ? string.substring(0, n - 1) + '...' : string;
@@ -32,6 +34,10 @@ const [show, setShow] = useState(false);
 
     function playTrailer() {
         setShow(true)
+    }
+
+    function showMoreInfo() {
+        setMoreInfo(!moreInfo)
     }
 
     return (
@@ -45,14 +51,14 @@ const [show, setShow] = useState(false);
         <div className='bannerContents'>
             <h1 className='bannerTitle'>{movie?.title}</h1>
             <div className='bannerDescription'>
-                <p>{truncate(`${movie?.overview}`, 150)}</p>
+            <p>{moreInfo === false ? truncate(`${movie?.overview}`, 120) : movie?.overview}</p>
             </div>
             <div className='bannerButtonsSection'>
                 <button onClick={playTrailer} className='playButton bannerButtons'>
                     <img src={playButton} className='playImg' alt='play button'/>
                     <span className='playText'>Play</span>
                 </button>
-                <button className='infoButton bannerButtons'>
+                <button className='infoButton bannerButtons' onClick={showMoreInfo}>
                     <img src={infoButton} className='infoImg' alt='info button'/>
                     <span className='infoText'>More Info</span>
                 </button>

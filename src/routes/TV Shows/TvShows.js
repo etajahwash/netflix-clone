@@ -3,10 +3,14 @@ import requests from '../../Request'
 import Row from '../../components/Row'
 import TvBanner from './TvBanner'
 import { Navigate } from 'react-router-dom'
+import { Helmet } from 'react-helmet'
 
 export default function TvShows({isSignedIn, setIsSignedIn}) {
     return (
         <div className="tvSection">
+            <Helmet>
+                <title>TV Shows - Netflix</title>
+            </Helmet>
             {isSignedIn === true ? (
             <>
             <TvBanner />

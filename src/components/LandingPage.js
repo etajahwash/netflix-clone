@@ -1,17 +1,17 @@
 import React from 'react'
 import '../styling/LandingPage.css'
 import bg from '../img/netflixbg2.jpg'
-import { Link, useNavigate, Navigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { UserAuth } from '../context/AuthContext'
 import { useState } from 'react'
-import { auth } from '../firebase'
+import { Helmet } from 'react-helmet'
 
 export default function LandingPage({isSignedIn, setIsSignedIn}) {
   const [ email, setEmail ] = useState('')
   const [ password, setPassword ] = useState('')
   const [ name, setName ] = useState('')
   const [ error, setError ] = useState('')
-  const { user, signUp } = UserAuth()
+  const { signUp } = UserAuth()
   const navigate = useNavigate()
 
   const handleSubmit = async (e) => {
@@ -24,7 +24,7 @@ export default function LandingPage({isSignedIn, setIsSignedIn}) {
       await signUp(email, password)
       localStorage.setItem('isSignedIn', JSON.stringify(!isSignedIn));
       setIsSignedIn(!isSignedIn)
-      navigate('/home')
+      navigate('/login-redirect')
     } catch (error) {
       console.log(error)
       setError(error.message)
@@ -38,7 +38,10 @@ export default function LandingPage({isSignedIn, setIsSignedIn}) {
       backgroundSize: '100% 100%',
       backgroundRepeat: 'no-repeat'
     }}>
-      {/* {prop.isSignedIn === true ? ( */}
+        <Helmet>
+          <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+          <title>Netflix</title>
+        </Helmet>
         <div className='landingOutline'>
         <form onSubmit={handleSubmit}> 
           <div className='landingInner'>

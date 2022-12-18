@@ -5,12 +5,13 @@ import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import { Link, useNavigate } from 'react-router-dom';
 import { UserAuth } from '../context/AuthContext'
 import { useState } from 'react'
+import { Helmet } from 'react-helmet';
 
 export default function LoginPage({isSignedIn, setIsSignedIn}) {
   const [ email, setEmail ] = useState('')
   const [ password, setPassword ] = useState('')
   const [ error, setError ] = useState('')
-  const { user, logIn } = UserAuth()
+  const { logIn } = UserAuth()
   // const [cart,setCart] = useState(localStorage.getItem("key") || [])
 
   const navigate = useNavigate()
@@ -42,6 +43,11 @@ export default function LoginPage({isSignedIn, setIsSignedIn}) {
     <div className='loginContainer' style={{
       backgroundImage: `url(${bg})`
     }}>
+        <Helmet>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+        <title>Netflix</title>
+        </Helmet>
+
       <div className='loginOutline'>
         <form onSubmit={handleSubmit}>
           <div className='loginInner'>
