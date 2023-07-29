@@ -1,0 +1,40 @@
+[debug] [2023-07-29T23:18:01.049Z] ----------------------------------------------------------------------
+[debug] [2023-07-29T23:18:01.052Z] Command:       C:\Users\etaja\node.exe C:\Users\etaja\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2023-07-29T23:18:01.053Z] CLI Version:   11.19.0
+[debug] [2023-07-29T23:18:01.053Z] Platform:      win32
+[debug] [2023-07-29T23:18:01.053Z] Node Version:  v16.18.0
+[debug] [2023-07-29T23:18:01.059Z] Time:          Sat Jul 29 2023 19:18:01 GMT-0400 (Eastern Daylight Time)
+[debug] [2023-07-29T23:18:01.060Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-07-29T23:18:01.079Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2023-07-29T23:18:01.220Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-07-29T23:18:01.221Z] > authorizing via signed-in user (etajahwash@gmail.com)
+[debug] [2023-07-29T23:18:01.221Z] [iam] checking project netflix-clone-34643 for permissions ["cloudconfig.configs.get","cloudconfig.configs.update","firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-07-29T23:18:01.223Z] > refreshing access token with scopes: []
+[debug] [2023-07-29T23:18:01.224Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-07-29T23:18:01.224Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-07-29T23:18:01.423Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2023-07-29T23:18:01.424Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2023-07-29T23:18:01.459Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 400
+[debug] [2023-07-29T23:18:01.459Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-07-29T23:18:01.460Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/netflix-clone-34643:testIamPermissions [none]
+[debug] [2023-07-29T23:18:01.460Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/netflix-clone-34643:testIamPermissions x-goog-quota-user=projects/netflix-clone-34643
+[debug] [2023-07-29T23:18:01.460Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/netflix-clone-34643:testIamPermissions {"permissions":["cloudconfig.configs.get","cloudconfig.configs.update","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-07-29T23:18:01.692Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/netflix-clone-34643:testIamPermissions 401
+[debug] [2023-07-29T23:18:01.692Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/netflix-clone-34643:testIamPermissions {"error":{"code":401,"message":"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"ACCESS_TOKEN_TYPE_UNSUPPORTED","metadata":{"method":"google.cloudresourcemanager.v1.Projects.TestIamPermissions","service":"cloudresourcemanager.googleapis.com"}}]}}
+[debug] [2023-07-29T23:18:01.695Z] [iam] error while checking permissions, command may fail: FirebaseError: HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+[debug] [2023-07-29T23:18:01.696Z] > refreshing access token with scopes: []
+[debug] [2023-07-29T23:18:01.697Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-07-29T23:18:01.697Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-07-29T23:18:01.855Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 400
+[debug] [2023-07-29T23:18:01.856Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-07-29T23:18:01.857Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/netflix-clone-34643 [none]
+[debug] [2023-07-29T23:18:02.020Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/netflix-clone-34643 401
+[debug] [2023-07-29T23:18:02.020Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/netflix-clone-34643 {"error":{"code":401,"message":"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED"}}
+[debug] [2023-07-29T23:18:02.021Z] HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+[debug] [2023-07-29T23:18:02.023Z] FirebaseError: HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+    at responseToError (C:\Users\etaja\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:49:12)
+    at RetryOperation._fn (C:\Users\etaja\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:288:77)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[error] 
+[error] Error: Failed to get Firebase project netflix-clone-34643. Please make sure the project exists and your account has permission to access it.

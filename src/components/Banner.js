@@ -11,20 +11,6 @@ const [movie, setMovie] = useState([]);
 const [show, setShow] = useState(false);
 const [moreInfo, setMoreInfo] = useState(false)
 
-    useEffect(() => {
-        function fetchData() {
-            const request = bannerData;
-            setMovie(
-                request[
-                    Math.floor(Math.random() * request.length)
-                ]
-            );
-            return request;
-        }
-
-        fetchData()
-    }, []);
-
     function showMoreInfo() {
         setMoreInfo(!moreInfo)
     }
@@ -38,7 +24,20 @@ const [moreInfo, setMoreInfo] = useState(false)
         setShow(true)
     }
 
+    useEffect(() => {
+        function fetchData() {
+            const request = bannerData;
+            setMovie(
+                request[
+                    Math.floor(Math.random() * request.length)
+                ]
+            );
+            return request;
+        }
 
+        fetchData()
+    }, []);
+    
     return (
         <header className='bannerSection' style={{
             backgroundImage: `url(${movie?.img})`,
@@ -47,8 +46,8 @@ const [moreInfo, setMoreInfo] = useState(false)
         }}>
         <div className='bannerContentSection'>
         <div className='bannerContents'>
-            <h1 className={ movie.title === 'Inuyasha' ? 'blackText' : movie.title === 'Castlevania' ? 'redText' : 'bannerTitle'}>{movie?.title}</h1>
-            <div className={movie.title === 'Inuyasha' ? 'blacktextDesc' : movie.title === 'Castlevania' ? 'redTextDesc' : 'bannerDescription'}>
+            <h1 className={ movie?.title === 'Inuyasha' ? 'blackText' : movie?.title === 'Castlevania' ? 'redText' : 'bannerTitle'}>{movie?.title}</h1>
+            <div className={movie?.title === 'Inuyasha' ? 'blacktextDesc' : movie?.title === 'Castlevania' ? 'redTextDesc' : 'bannerDescription'}>
                 <p>{moreInfo === false ? truncate(`${movie?.overview}`, 120) : movie?.overview}</p>
             </div>
             <div className='bannerButtonsSection'>
