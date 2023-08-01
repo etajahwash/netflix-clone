@@ -81,7 +81,7 @@ export default function Profile({isSignedIn, setIsSignedIn, plan, setPlan}) {
     const standardSelectionText = () => {
         setPlan('Standard');
         setIsSubscribed(true)
-        toast.success(`You have subscribed to the Basic plan.`, {
+        toast.success(`You have subscribed to the Standard plan.`, {
                     position: 'bottom-left',
                     autoClose: 3500,
                     theme: 'colored'
@@ -101,15 +101,14 @@ export default function Profile({isSignedIn, setIsSignedIn, plan, setPlan}) {
     const premiumSelectionText = () => {
         setPlan('Premium');
         setIsSubscribed(true)
-        toast.success(`You have subscribed to the Basic plan.`, {
+        toast.success(`You have subscribed to the Premium plan.`, {
                     position: 'bottom-left',
                     autoClose: 3500,
                     theme: 'colored'
                  });
     }
 
-    // console.log(plan)
-
+    
     return (
         <div className='profileSection'>
             <Helmet>

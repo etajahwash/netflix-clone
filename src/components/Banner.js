@@ -46,9 +46,11 @@ const [moreInfo, setMoreInfo] = useState(false)
         }}>
         <div className='bannerContentSection'>
         <div className='bannerContents'>
-            <h1 className={ movie?.title === 'Inuyasha' ? 'blackText' : movie?.title === 'Castlevania' ? 'redText' : 'bannerTitle'}>{movie?.title}</h1>
-            <div className={movie?.title === 'Inuyasha' ? 'blacktextDesc' : movie?.title === 'Castlevania' ? 'redTextDesc' : 'bannerDescription'}>
-                <p>{moreInfo === false ? truncate(`${movie?.overview}`, 120) : movie?.overview}</p>
+            <h1 className={movie?.title === 'Inuyasha' ? 'blackText' : movie?.title === 'Castlevania' ? 'whiteTextTitle' : 'bannerTitle'}>{movie?.title}</h1>
+            <div className={movie?.title === 'Inuyasha' ? 'blackTextDesc' : movie?.title === 'Castlevania' ? 'redTextDesc' : 'bannerDescription'}>
+                <p>
+                    {moreInfo === false && movie?.title === 'Castlevania' ? truncate(`${movie?.overview}`, 80) : moreInfo === false ? truncate(`${movie?.overview}`, 120) : movie?.overview}
+                </p>
             </div>
             <div className='bannerButtonsSection'>
                 <button className='playButton bannerButtons' onClick={playTrailer}>
