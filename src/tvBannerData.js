@@ -3,7 +3,7 @@ import bridgerton from './img/bridgerton.jpg'
 import euphoria from './img/euphoria.jpg'
 import hotd from './img/hotd.jpg'
 import hbm from './img/hbm.jpeg'
-import tua from './img/tua.jpg'
+import gap from './img/gap.jpg'
 
 
 const tvBannerData = [
@@ -44,10 +44,10 @@ const tvBannerData = [
     },
     {
         id: 6,
-        title: 'The Umbrella Academy',
-        img: `${tua}`,
-        overview: 'A family of former child heroes, now grown apart, must reunite to continue to protect the world.',
-        videoUrl: 'https://www.youtube.com/watch?v=0DAmWHxeoKw',
+        title: 'Gap The Series',
+        img: `${gap}`,
+        overview: "Long after Sam first came to Mon's rescue when they were kids, Sam is unambiguously Mon's idol. In order to be near her, Mon gets a job working under her. When they finally meet again at the office, Mon is surprised by her icy exterior, so different from the image she'd had of her and what she herself wants to be.",
+        videoUrl: 'https://www.youtube.com/watch?v=f7Kso0QOaiE',
     }
 ]
 

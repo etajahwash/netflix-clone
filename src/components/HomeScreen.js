@@ -16,6 +16,7 @@ export default function HomeScreen({isSignedIn}) {
             </Helmet>
             {isSignedIn === true ? (
             <div key={100}>
+            {isSignedIn = true}
             <Navbar />
 
             <Banner />
@@ -49,7 +50,8 @@ export default function HomeScreen({isSignedIn}) {
             <Row title='Sci-Fi & Fantasy'
             fetchUrl={requests.fetchFantasy}
             />
-            </div>) : <Navigate to='/' />}
+            </div>)
+            : <Navigate to='/' />}
         </div>
     )
 }

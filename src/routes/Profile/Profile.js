@@ -81,7 +81,7 @@ export default function Profile({isSignedIn, setIsSignedIn, plan, setPlan}) {
     const standardSelectionText = () => {
         setPlan('Standard');
         setIsSubscribed(true)
-        toast.success(`You have subscribed to the Basic plan.`, {
+        toast.success(`You have subscribed to the Standard plan.`, {
                     position: 'bottom-left',
                     autoClose: 3500,
                     theme: 'colored'
@@ -101,15 +101,14 @@ export default function Profile({isSignedIn, setIsSignedIn, plan, setPlan}) {
     const premiumSelectionText = () => {
         setPlan('Premium');
         setIsSubscribed(true)
-        toast.success(`You have subscribed to the Basic plan.`, {
+        toast.success(`You have subscribed to the Premium plan.`, {
                     position: 'bottom-left',
                     autoClose: 3500,
                     theme: 'colored'
                  });
     }
 
-    // console.log(plan)
-
+    
     return (
         <div className='profileSection'>
             <Helmet>
@@ -122,7 +121,7 @@ export default function Profile({isSignedIn, setIsSignedIn, plan, setPlan}) {
                 <h1>Account</h1>
                 <div className='memberSinceSection'>
                 <img src={miniLogo} className='miniLogo' alt='mini icon img' />
-                <h4>Member Since 2022</h4>
+                <h4 className='msText'>Member Since 2023</h4>
                 </div>
             </div>
             <div className='profileLogout'>
@@ -143,7 +142,7 @@ export default function Profile({isSignedIn, setIsSignedIn, plan, setPlan}) {
             </div>
             <hr/>
             <div className='lower'>
-                <p className='billing'>Your free trial will end within 30 days.</p>
+                <p className='billing'>Your free trial will end within 14 days.</p>
                 <div className='lowerOne'>
                     <h3>Plans</h3>
                     <p>(Current Plan: <span className='planType'>{plan}</span>)</p>
