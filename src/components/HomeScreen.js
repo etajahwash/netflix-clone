@@ -7,7 +7,7 @@ import { Navigate } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
 
 
-export default function HomeScreen({isSignedIn}) {
+export default function HomeScreen({isSignedIn = true}) {
 
     return (
         <div className="homeScreen">
