@@ -220,7 +220,10 @@ hr {
 
 .memberSinceSection {
     display: flex;
+}
 
+.msText {
+    margin-top: -0.1rem;
 }
 
 

@@ -7,7 +7,7 @@ export default function LoginRedirect({setIsSignedIn}) {
   const navigate = useNavigate();
 
   useEffect(() => {
-    setIsSignedIn(prev => prev = true) 
+    setIsSignedIn(true) 
     setTimeout(() => {
     navigate('/home')
   }, "3000");

@@ -44,11 +44,11 @@ const [moreInfo, setMoreInfo] = useState(false)
             backgroundPosition: 'center center',
         }}>
         <div className='bannerContentSection'>
-        <h1 className='heading'>TV Shows</h1>
+        <h1 className={movie?.title === 'Gap The Series' ? 'headingBlack' : 'heading'}>TV Shows</h1>
         <div className='bannerContents'>
-            <h1 className='bannerTitle'>{movie?.title}</h1>
-            <div className='bannerDescription'>
-            <p>{moreInfo === false ? truncate(`${movie?.overview}`, 120) : movie?.overview}</p>
+            <h1 className={movie?.title === 'Gap The Series' || movie?.title === 'The Cleaning Lady' ? 'blackText' : 'bannerTitle'}>{movie?.title === undefined ? '' : movie?.title}</h1>
+            <div className={movie?.title === 'Gap The Series' || movie?.title === 'The Cleaning Lady' ? 'blackTextDescLong' : 'bannerDescription'}>
+            <p>{movie?.title === undefined ? '' : moreInfo === false ? truncate(`${movie?.overview}`, 120) : movie?.overview}</p>
             </div>
             <div className='bannerButtonsSection'>
                 <button onClick={playTrailer} className='playButton bannerButtons'>
@@ -63,7 +63,7 @@ const [moreInfo, setMoreInfo] = useState(false)
         </div>
         {show === true ? (
         <div className='videoPlayer'>
-        <ReactPlayer url={movie?.videoUrl} playing='true' width='100vw' height='97vh' />
+        <ReactPlayer url={movie?.videoUrl} playing='true' width='100vw' height={window.innerWidth > 1000 ? '82vh' : window.innerWidth > 799 ? '93vh' : '105vh'} />
         </div>
         ) : null}
         <div className='fadeBottom'/>
