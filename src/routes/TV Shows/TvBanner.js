@@ -46,9 +46,11 @@ const [moreInfo, setMoreInfo] = useState(false)
         <div className='bannerContentSection'>
         <h1 className={movie?.title === 'Gap The Series' ? 'headingBlack' : 'heading'}>TV Shows</h1>
         <div className='bannerContents'>
-            <h1 className={movie?.title === 'Gap The Series' || movie?.title === 'The Cleaning Lady' ? 'blackText' : 'bannerTitle'}>{movie?.title === undefined ? '' : movie?.title}</h1>
-            <div className={movie?.title === 'Gap The Series' || movie?.title === 'The Cleaning Lady' ? 'blackTextDescLong' : 'bannerDescription'}>
-            <p>{movie?.title === undefined ? '' : moreInfo === false ? truncate(`${movie?.overview}`, 120) : movie?.overview}</p>
+            <div className={(!moreInfo && movie?.title === 'Bridgerton') || (!moreInfo && movie?.title === 'Gap The Series') || (!moreInfo && movie?.title === 'The Cleaning Lady') ? 'moreInfoBg' : (movie?.title === 'Gap The Series') || (movie?.title === 'The Cleaning Lady') || (movie?.title === 'Bridgerton') ? 'tvBannerLong' : null}>
+            <h1 className={movie?.title === 'The Haunting of Bly Manor' ? 'shorterBannerTitle' : 'bannerTitle'}>{movie?.title === undefined ? '' : movie?.title}</h1>
+            <div className='bannerDescription'>
+            <p className={window.innerWidth < 700 ? 'tvParaUp' : null}>{movie?.title === undefined ? '' : moreInfo === false ? truncate(`${movie?.overview}`, 120) : movie?.overview}</p>
+            </div>
             </div>
             <div className='bannerButtonsSection'>
                 <button onClick={playTrailer} className='playButton bannerButtons'>
@@ -63,7 +65,7 @@ const [moreInfo, setMoreInfo] = useState(false)
         </div>
         {show === true ? (
         <div className='videoPlayer'>
-        <ReactPlayer url={movie?.videoUrl} playing='true' width='100vw' height={window.innerWidth > 1000 ? '82vh' : window.innerWidth > 799 ? '93vh' : '105vh'} />
+        <ReactPlayer url={movie?.videoUrl} playing='true' width='100vw' height={window.innerWidth > 1000 ? '82vh' : window.innerWidth > 700 ? '80vh' : window.innerWidth < 700 ? '78vh' : null} />
         </div>
         ) : null}
         <div className='fadeBottom'/>

@@ -49,9 +49,11 @@ const [moreInfo, setMoreInfo] = useState(false)
         <div className='bannerContentSection'>
         <h1 className='heading'>Movies</h1>
         <div className='bannerContents'>
-            <h1 className='bannerTitle'>{movie?.title === undefined ? '' : movie?.title}</h1>
+            <div className={(!moreInfo && movie?.title === 'Happiest Season') || (window.innerWidth < 600 && !moreInfo && movie?.title === 'Everything Everywhere All At Once') || (window.innerWidth < 600 && !moreInfo && movie?.title === 'Badhaai Do') ? 'moreInfoBg' : (window.innerWidth < 600 && movie?.title === 'Everything Everywhere All At Once') || (window.innerWidth < 600 && movie?.title === 'Badhaai Do') || (movie?.title === 'Happiest Season') ? 'tvBannerLong' : null}>
+            <h1 className={window.innerWidth < 600 && movie?.title === 'Everything Everywhere All At Once' ? 'shorterBannerTitle' : 'bannerTitle'}>{movie?.title === undefined ? '' : movie?.title}</h1>
             <div className='bannerDescription'>
             <p>{movie?.title === undefined ? '' : moreInfo === false ? truncate(`${movie?.overview}`, 120) : movie?.overview}</p>
+            </div>
             </div>
             <div className='bannerButtonsSection'>
                 <button onClick={playTrailer} className='playButton bannerButtons'>
@@ -66,7 +68,7 @@ const [moreInfo, setMoreInfo] = useState(false)
         </div>
         {show === true ? (
         <div className='videoPlayer'>
-        <ReactPlayer url={movie?.videoUrl} playing='true' width='100vw' height={window.innerWidth > 1000 ? '82vh' : window.innerWidth > 799 ? '93vh' : '105vh'} />
+        <ReactPlayer url={movie?.videoUrl} playing='true' width='100vw' height={window.innerWidth > 1000 ? '82vh' : window.innerWidth > 700 ? '80vh' : window.innerWidth < 700 ? '78vh' : null} />
         </div>
         ) : null}
         <div className='fadeBottom'/>

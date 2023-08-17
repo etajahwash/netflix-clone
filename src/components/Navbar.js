@@ -37,6 +37,11 @@ export default function Navbar() {
         setIsActive(false);
         navigate("/movies");
       }
+
+      function navHome() {
+        setIsActive(false);
+        navigate("/home");
+      }
     
       function navNandP() {
         setIsActive(false);
@@ -100,6 +105,9 @@ export default function Navbar() {
                     </Box>
                     <Divider />
                     <List>
+                        <ListItemButton onClick={navHome}>
+                        <ListItemText primary={"Home"} />
+                        </ListItemButton>
                         <ListItemButton onClick={navMovies}>
                         <ListItemText primary={"Movies"} />
                         </ListItemButton>

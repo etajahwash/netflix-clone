@@ -46,11 +46,13 @@ const [moreInfo, setMoreInfo] = useState(false)
         }}>
         <div className='bannerContentSection'>
         <div className='bannerContents'>
-            <h1 className={movie?.title === 'Inuyasha' ? 'blackText' : movie?.title === 'Castlevania' ? 'redText' : 'bannerTitle'}>{movie?.title === undefined ? '' : movie?.title}</h1>
-            <div className={movie?.title === 'Inuyasha' ? 'blackTextDesc' : movie?.title === 'Castlevania' ? 'redTextDesc' : 'bannerDescription'}>
+            <div className={(window.innerWidth < 600 && !moreInfo && movie?.title === 'SPY x FAMILY') || (window.innerWidth < 600 && !moreInfo && movie?.title === 'Inuyasha') || (window.innerWidth < 600 && !moreInfo && movie?.title === 'The Promised Neverland') ? 'moreInfoBg' : (window.innerWidth < 600 && movie?.title === 'Inuyasha') || (window.innerWidth < 600 && movie?.title === 'SPY x FAMILY') || (window.innerWidth < 600 && movie?.title ==='The Promised Neverland') ? 'bannerBgs' : (window.innerWidth < 600 && !moreInfo && movie?.title === 'Inuyasha') || (window.innerWidth < 600 && !moreInfo && movie?.title === 'SPY x FAMILY') || (window.innerWidth < 600 && !moreInfo && movie?.title ==='The Promised Neverland') ? 'moreInfoBg' : (window.innerWidth < 600 && movie?.title === 'Inuyasha') || (window.innerWidth < 600 && movie?.title === 'Spy x Family') || (window.innerWidth < 600 && movie?.title ==='The Promised Neverland') ? 'bannerBgs' : (window.innerWidth > 600 && movie?.title === 'Inuyasha') || (window.innerWidth > 600 && movie?.title === 'Castlevania') ? 'bannerBgsL' : null}>
+            <h1 className={(window.innerWidth < 700 && movie?.title === 'The Promised Neverland') ? 'shorterBannerTitle' : 'bannerTitle'}>{movie?.title === undefined ? '' : movie?.title}</h1>
+            <div className='bannerDescription'>
                 <p>
-                    {movie?.title === undefined ? '' : moreInfo === false && movie?.title === 'Castlevania' ? truncate(`${movie?.overview}`, 80) : moreInfo === false ? truncate(`${movie?.overview}`, 120) : movie?.overview}
+                    {movie?.title === undefined ? '' : moreInfo === false && movie?.title === 'Castlevania' ? truncate(`${movie?.overview}`, 80) : moreInfo === false ? truncate(`${movie?.overview}`, 117) : movie?.overview}
                 </p>
+            </div>
             </div>
             <div className='bannerButtonsSection'>
                 <button className='playButton bannerButtons' onClick={playTrailer}>
@@ -66,7 +68,7 @@ const [moreInfo, setMoreInfo] = useState(false)
 
         {show === true ? (
         <div className={'videoPlayer'}>
-        <ReactPlayer url={movie?.videoUrl} playing='true' width='100vw' height={window.innerWidth > 1000 ? '82vh' : window.innerWidth > 799 ? '93vh' : '105vh'} />
+        <ReactPlayer url={movie?.videoUrl} playing='true' width='100vw' height={window.innerWidth > 1000 ? '82vh' : window.innerWidth > 700 ? '80vh' : window.innerWidth < 700 ? '78vh' : null} />
         </div>
         ) : null}
 
