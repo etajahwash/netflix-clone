@@ -10,6 +10,7 @@ export default function LoginRedirect({setIsSignedIn}) {
     setIsSignedIn(true) 
     setTimeout(() => {
     navigate('/home')
+    setIsSignedIn(true) 
   }, "3000");
   })
   return (
