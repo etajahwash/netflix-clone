@@ -142,7 +142,12 @@ export default function Profile({isSignedIn, setIsSignedIn, plan, setPlan}) {
             </div>
             <hr/>
             <div className='lower'>
+                {!isSubscribed ? (
                 <p className='billing'>Your free trial will end within 14 days.</p>
+                )
+                : (
+                    <div className='justSomeSpace'></div>
+                )}
                 <div className='lowerOne'>
                     <h3>Plans</h3>
                     <p>(Current Plan: <span className='planType'>{plan}</span>)</p>
