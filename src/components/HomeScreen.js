@@ -5,9 +5,11 @@ import Row from './Row'
 import requests from '../Request'
 import { Navigate } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
+import { UserAuth } from '../context/AuthContext'
 
 
-export default function HomeScreen({isSignedIn = true}) {
+export default function HomeScreen({isSignedIn}) {
+    const {user} = UserAuth()
 
     return (
         <div className="homeScreen">
@@ -16,7 +18,7 @@ export default function HomeScreen({isSignedIn = true}) {
             </Helmet>
             {isSignedIn === true ? (
             <div key={100}>
-            {isSignedIn = true}
+            {user}
             <Navbar />
 
             <Banner />
