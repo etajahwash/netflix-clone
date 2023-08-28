@@ -13,9 +13,10 @@ import { AuthContextProvider } from "./context/AuthContext";
 import { useState } from "react";
 import "./styling/app.css";
 import {
-  BrowserRouter as Router,
+  createBrowserRouter,
+  RouterProvider,
+  createRoutesFromElements,
   Route,
-  Routes
 } from "react-router-dom";
 
 
@@ -28,23 +29,29 @@ function App() {
     JSON.parse(localStorage.getItem('plan'))
   )
 
+  const router = createBrowserRouter(
+    createRoutesFromElements(
+      <>
+        <Route path='/' element={<LandingPage isSignedIn={isSignedIn} setIsSignedIn={setIsSignedIn} />} />
+        <Route path='/login' element={<Login isSignedIn={isSignedIn} setIsSignedIn={setIsSignedIn}/>} />
+        <Route path='*' element={<ErrorPage />} isSignedIn={isSignedIn} />
+        <Route path='/tv-shows' element={<><Navbar /> <TvShows isSignedIn={isSignedIn} setIsSignedIn={setIsSignedIn} /></>} />
+        <Route path='/movies' element={<><Navbar /> <Movies isSignedIn={isSignedIn} setIsSignedIn={setIsSignedIn} /></>} />
+        <Route path='/new-&-popular' element={<><Navbar /> <NewPopular isSignedIn={isSignedIn} setIsSignedIn={setIsSignedIn} /></>} />
+        <Route path='/profile' element={<><Navbar /> <Profile isSignedIn={isSignedIn} setIsSignedIn={setIsSignedIn} plan={plan} setPlan={setPlan} /></>} />
+        <Route path='/home' element={<><Navbar /> <HomeScreen isSignedIn={isSignedIn} setIsSignedIn={setIsSignedIn} /></>} />
+        <Route path='/login-redirect' element={<LoginRedirect isSignedIn={isSignedIn} setIsSignedIn={setIsSignedIn} />} />
+      </>
+    )
+  );
+
   return (
-    <div key={1000} style={{overflowX: 'hidden'}}>
-      <AuthContextProvider key={1001}>
-        <div key={1002} className="app">
-          <Router key={1003}>
-            <Routes key={1004}>
-              <Route key={1005} path='/' element={<LandingPage isSignedIn={isSignedIn} setIsSignedIn={setIsSignedIn} />} />
-              <Route key={1006} path='/login' element={<Login isSignedIn={isSignedIn} setIsSignedIn={setIsSignedIn}/>} />
-              <Route key={1007} path='*' element={<ErrorPage />} />
-              <Route key={1008} path='/tv-shows' element={<><Navbar /> <TvShows isSignedIn={isSignedIn} setIsSignedIn={setIsSignedIn} /></>} />
-              <Route key={1009} path='/movies' element={<><Navbar /> <Movies isSignedIn={isSignedIn} setIsSignedIn={setIsSignedIn} /></>} />
-              <Route key={1010} path='/new-&-popular' element={<><Navbar /> <NewPopular isSignedIn={isSignedIn} setIsSignedIn={setIsSignedIn} /></>} />
-              <Route key={1011} path='/profile' element={<><Navbar /> <Profile isSignedIn={isSignedIn} setIsSignedIn={setIsSignedIn} plan={plan} setPlan={setPlan} /></>} />
-              <Route key={1012} path='/home' element={<><Navbar /> <HomeScreen isSignedIn={isSignedIn} setIsSignedIn={setIsSignedIn} /></>} />
-              <Route key={1014} path='/login-redirect' element={<LoginRedirect isSignedIn={isSignedIn} setIsSignedIn={setIsSignedIn} />} />
-            </Routes>
-          </Router>
+    <div style={{overflowX: 'hidden'}}>
+      <AuthContextProvider>
+        <div className="app">
+          <RouterProvider
+            router = {router}
+          />
         </div>
       </AuthContextProvider>
     </div>

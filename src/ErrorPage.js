@@ -12,7 +12,7 @@ export default function ErrorPage() {
       <i><h1 className="oops">Oops!</h1></i>
         <i><h3 className="errorText">This page doesn't exist</h3></i>
       </div><br/>
-      <Link to='/'>
+      <Link to='/home'>
       <button className="errorButton">Return Home</button>
       </Link>
     </div>

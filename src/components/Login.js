@@ -12,33 +12,24 @@ export default function LoginPage({isSignedIn, setIsSignedIn}) {
   const [ password, setPassword ] = useState('')
   const [ error, setError ] = useState('')
   const { logIn } = UserAuth()
-  // const [cart,setCart] = useState(localStorage.getItem("key") || [])
 
   const navigate = useNavigate()
 
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    setIsSignedIn(true)
-    localStorage.setItem('isSignedIn', JSON.stringify(!isSignedIn));
-    setIsSignedIn(!isSignedIn)
+    localStorage.setItem('isSignedIn', JSON.stringify(isSignedIn));
 
-
-
-      // if(isSignedIn === true) {
       try {
         await logIn(email, password)
+        localStorage.setItem('isSignedIn', JSON.stringify(!isSignedIn));
         navigate('/login-redirect')
       } catch (error) {
         console.log(error)
         setError(error.message)
       }
-    // } else{
-    //   console.log(error)
-    //   setError(error.message)
-    // }
-
   }
+
   return (
     <div className='loginContainer' style={{
       backgroundImage: `url(${bg})`
