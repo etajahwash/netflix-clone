@@ -34,7 +34,7 @@ function App() {
       <>
         <Route path='/' element={<LandingPage isSignedIn={isSignedIn} setIsSignedIn={setIsSignedIn} />} />
         <Route path='/login' element={<Login isSignedIn={isSignedIn} setIsSignedIn={setIsSignedIn}/>} />
-        <Route path='*' element={<ErrorPage />} isSignedIn={isSignedIn} />
+        <Route path='*' element={<ErrorPage />} />
         <Route path='/tv-shows' element={<><Navbar /> <TvShows isSignedIn={isSignedIn} setIsSignedIn={setIsSignedIn} /></>} />
         <Route path='/movies' element={<><Navbar /> <Movies isSignedIn={isSignedIn} setIsSignedIn={setIsSignedIn} /></>} />
         <Route path='/new-&-popular' element={<><Navbar /> <NewPopular isSignedIn={isSignedIn} setIsSignedIn={setIsSignedIn} /></>} />

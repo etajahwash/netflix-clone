@@ -44,12 +44,14 @@ const [moreInfo, setMoreInfo] = useState(false)
             backgroundPosition: 'center center',
         }}>
         <div className='bannerContentSection'>
-        <h1 className={movie?.title === 'Gap The Series' ? 'headingBlack' : 'heading'}>TV Shows</h1>
+        <h1 className={window.innerWidth > 600 && movie?.title === 'Gap The Series' ? 'headingBlack' : 'heading'}>TV Shows</h1>
         <div className='bannerContents'>
             <div className={(!moreInfo && movie?.title === 'Bridgerton') || (!moreInfo && movie?.title === 'Gap The Series') || (!moreInfo && movie?.title === 'The Cleaning Lady') ? 'moreInfoBg' : (movie?.title === 'Gap The Series') || (movie?.title === 'The Cleaning Lady') || (movie?.title === 'Bridgerton') ? 'tvBannerLong' : null}>
             <h1 className={movie?.title === 'The Haunting of Bly Manor' ? 'shorterBannerTitle' : 'bannerTitle'}>{movie?.title === undefined ? '' : movie?.title}</h1>
             <div className='bannerDescription'>
-            <p className={window.innerWidth < 700 ? 'tvParaUp' : null}>{movie?.title === undefined ? '' : moreInfo === false ? truncate(`${movie?.overview}`, 120) : movie?.overview}</p>
+            <p className={window.innerWidth < 700 ? 'tvParaUp' : null}>
+                {movie?.title === undefined ? '' : moreInfo === false && movie?.overview.length < 120 ? truncate(`${movie?.overview}`, 75) : moreInfo === false ? truncate(`${movie?.overview}`, 120) : movie?.overview}
+            </p>
             </div>
             </div>
             <div className='bannerButtonsSection'>

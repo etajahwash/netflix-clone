@@ -52,7 +52,7 @@ const [moreInfo, setMoreInfo] = useState(false)
             <div className={(!moreInfo && movie?.title === 'Happiest Season') || (window.innerWidth < 600 && !moreInfo && movie?.title === 'Everything Everywhere All At Once') || (window.innerWidth < 600 && !moreInfo && movie?.title === 'Badhaai Do') ? 'moreInfoBg' : (window.innerWidth < 600 && movie?.title === 'Everything Everywhere All At Once') || (window.innerWidth < 600 && movie?.title === 'Badhaai Do') || (movie?.title === 'Happiest Season') ? 'tvBannerLong' : null}>
             <h1 className={window.innerWidth < 600 && movie?.title === 'Everything Everywhere All At Once' ? 'shorterBannerTitle' : 'bannerTitle'}>{movie?.title === undefined ? '' : movie?.title}</h1>
             <div className='bannerDescription'>
-            <p>{movie?.title === undefined ? '' : moreInfo === false ? truncate(`${movie?.overview}`, 120) : movie?.overview}</p>
+            <p>{movie?.title === undefined ? '' : moreInfo === false && movie?.overview.length < 120 ? truncate(`${movie?.overview}`, 75) : moreInfo === false ? truncate(`${movie?.overview}`, 120) : movie?.overview}</p>
             </div>
             </div>
             <div className='bannerButtonsSection'>

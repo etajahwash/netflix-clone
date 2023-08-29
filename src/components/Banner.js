@@ -50,7 +50,7 @@ const [moreInfo, setMoreInfo] = useState(false)
             <h1 className={(window.innerWidth < 700 && movie?.title === 'The Promised Neverland') ? 'shorterBannerTitle' : 'bannerTitle'}>{movie?.title === undefined ? '' : movie?.title}</h1>
             <div className='bannerDescription'>
                 <p>
-                    {movie?.title === undefined ? '' : moreInfo === false && movie?.title === 'Castlevania' ? truncate(`${movie?.overview}`, 80) : moreInfo === false ? truncate(`${movie?.overview}`, 117) : movie?.overview}
+                    {movie?.title === undefined ? '' : moreInfo === false && movie?.overview.length < 120 ? truncate(`${movie?.overview}`, 75) : moreInfo === false ? truncate(`${movie?.overview}`, 120) : movie?.overview}
                 </p>
             </div>
             </div>
