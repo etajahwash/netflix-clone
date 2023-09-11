@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "site": "netflix-clone-34643",
+    "site": "netflix-clone-131",
     "public": "build",
     "ignore": [
       "firebase.json",
@@ -13,8 +13,5 @@
         "destination": "/index.html"
       }
     ]
-  },
-  "remoteconfig": {
-    "template": "remoteconfig.template.json"
   }
 }
