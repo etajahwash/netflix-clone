@@ -68,7 +68,7 @@ const [moreInfo, setMoreInfo] = useState(false)
         </div>
         {show === true ? (
         <div className='videoPlayer'>
-        <ReactPlayer url={movie?.videoUrl} playing='true' width='100vw' height={window.innerWidth > 1000 ? '82vh' : window.innerWidth > 700 ? '80vh' : window.innerWidth < 700 ? '78vh' : null} />
+        <ReactPlayer url={movie?.videoUrl} playing='true' width='100vw' height={window.innerWidth > 1000 ? '82vh' : window.innerWidth > 700 ? '84vh' : window.innerWidth > 450 ? '83vh' : window.innerWidth < 450 ? '78vh' : null} />
         </div>
         ) : null}
         <div className='fadeBottom'/>
