@@ -8,6 +8,8 @@ import inu from './img/inu.jpg'
 import inup from './img/inup.jpg'
 import jjk from './img/jjk.jpg'
 import jjkp from './img/jjkp.jpeg'
+import jjk2 from './img/jjk2.jpg'
+import jjk2p from './img/jjk2p.jpg'
 import shieldHero from './img/shieldHero.png'
 import shieldHerop from './img/shieldHerop.jpg'
 import spyx from './img/spy.jpg'
@@ -57,7 +59,7 @@ const bannerData = [
         videoUrl: 'https://www.youtube.com/watch?v=fzR82oXbjnY',
     },
     {
-                 id: 4,
+        id: 4,
         title: 'Inuyasha',
         img: `${photoChange(inu, inup)}`,
         overview: 'A teenage girl periodically travels back in time to feudal Japan to help a young half-demon recover the shards of a jewel of great power.',
@@ -65,7 +67,7 @@ const bannerData = [
     },
     {
         id: 5,
-        title: 'Jujutsu Kaisen',
+        title: 'JUJUTSU KAISEN',
         img: `${photoChange(jjk, jjkp)}`,
         overview: "A boy swallows a cursed talisman - the finger of a demon - and becomes cursed himself. He enters a shaman's school to be able to locate the demon's other body parts and thus exorcise himself.",
         videoUrl: 'https://www.youtube.com/watch?v=pkKu9hLT-t8',
@@ -78,18 +80,18 @@ const bannerData = [
         videoUrl: 'https://www.youtube.com/watch?v=rKnyi3TRznA',
     },
     {
-                    id: 7,
+        id: 7,
         title: 'SPY x FAMILY',
         img: `${photoChange(spyx, spyxp)}`,
         overview: 'A spy on an undercover mission gets married and adopts a child as part of his cover. His wife and daughter have secrets of their own, and all three must strive to keep together.',
         videoUrl: 'https://www.youtube.com/watch?v=ofXigq9aIpo',
     },
     {
-                 id: 8,
-        title: 'The Promised Neverland',
-        img: `${photoChange(tpn, tpnp)}`,
-        overview: 'When three gifted kids at an isolated idyllic orphanage discover the secret and sinister purpose they were raised for, they look for a way to escape from their evil caretaker and lead the other children in a risky escape plan.',
-        videoUrl: 'https://www.youtube.com/watch?v=ApLudqucq-s',
+        id: 8,
+        title: 'JUJUTSU KAISEN',
+        img: `${photoChange(jjk2, jjk2p)}`,
+        overview: "Dive in into th Hidden Inventory/Premature Death Arc of Jujutsu Kaisen, which looks back at Satoru Gojo's time as a student at Tokyo Jujutsu High.",
+        videoUrl: 'https://www.youtube.com/watch?v=Ig89Ot0UfvE',
     },
     {
         id: 9,

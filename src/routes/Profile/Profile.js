@@ -121,7 +121,7 @@ export default function Profile({isSignedIn, setIsSignedIn, plan, setPlan}) {
                 <h1>Account</h1>
                 <div className='memberSinceSection'>
                 <img src={miniLogo} className='miniLogo' alt='mini icon img' />
-                <h4 className='msText'>Member Since 2023</h4>
+                <h4 className='msText'>Member Since 2024</h4>
                 </div>
             </div>
             <div className='profileLogout'>
