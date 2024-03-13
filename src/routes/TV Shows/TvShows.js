@@ -5,7 +5,7 @@ import TvBanner from './TvBanner'
 import { Navigate } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
 
-export default function TvShows({isSignedIn, setIsSignedIn}) {
+export default function TvShows({isSignedIn}) {
     return (
         <div className="tvSection">
             <Helmet>
@@ -15,25 +15,25 @@ export default function TvShows({isSignedIn, setIsSignedIn}) {
             <>
             <TvBanner />
             <Row title='Bingeworthy Tv Dramas'
-            fetchUrl={requests.fetchTvDramas}
+            fetchUrl={requests?.fetchTvDramas}
             />
             <Row title='Shows for the Whole Family'
-            fetchUrl={requests.fetchFamilyTv}
+            fetchUrl={requests?.fetchFamilyTv}
             />
             <Row title='Popular on Netflix'
-            fetchUrl={requests.fetchNetflixTv}
+            fetchUrl={requests?.fetchNetflixTv}
             />
             <Row title='Crime TV Shows'
-            fetchUrl={requests.fetchCrimeTv}
+            fetchUrl={requests?.fetchCrimeTv}
             />
             <Row title='Soap TV'
-            fetchUrl={requests.fetchSoapTv}
+            fetchUrl={requests?.fetchSoapTv}
             />
             <Row title='Anime'
-            fetchUrl={requests.fetchAnimeTv}
+            fetchUrl={requests?.fetchAnimeTv}
             />
             <Row title='Fantasy TV'
-            fetchUrl={requests.fetchFantasyTv}
+            fetchUrl={requests?.fetchFantasyTv}
             />
              </>) : <Navigate to='/' />}
         </div>

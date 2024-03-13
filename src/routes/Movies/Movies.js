@@ -15,22 +15,22 @@ export default function Movies({isSignedIn}) {
             <>
             <MoviesBanner />
             <Row title='Only on Netflix'
-            fetchUrl={requests.fetchOON}
+            fetchUrl={requests?.fetchOON}
             />
             <Row title='Action-Packed Films'
-            fetchUrl={requests.fetchNetflixAction}
+            fetchUrl={requests?.fetchNetflixAction}
             />
             <Row title='Romances for the Heart'
-            fetchUrl={requests.fetchNetflixRomance}
+            fetchUrl={requests?.fetchNetflixRomance}
             />
             <Row title='Westerns'
-            fetchUrl={requests.fetchWesternMovies}
+            fetchUrl={requests?.fetchWesternMovies}
             />
             <Row title='Horror Movies'
-            fetchUrl={requests.fetchNetflixHorror}
+            fetchUrl={requests?.fetchNetflixHorror}
             />
             <Row title='Comedies'
-            fetchUrl={requests.fetchNetflixComedy}
+            fetchUrl={requests?.fetchNetflixComedy}
             />
             </>) : <Navigate to='/' />}
         </div>

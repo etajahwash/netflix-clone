@@ -1,4 +1,4 @@
-const apiKey = process.env.IMBD_API_KEY
+const apiKey = `${process.env.REACT_APP_IMBD_API_KEY}`
 
 const requests = {
    fetchTrending: `/trending/all/week?api_key=${apiKey}&language=en-US`,
